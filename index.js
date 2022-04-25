@@ -101,6 +101,11 @@ async function run() {
       const result = await orderCollection.insertOne(order);
       res.send(result);
     });
+
+    //heroku
+     app.get('/hero', (req, res)=>{
+       res.send('connected with heroku');
+     })
   } 
   finally {
 
