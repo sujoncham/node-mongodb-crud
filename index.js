@@ -102,10 +102,7 @@ async function run() {
       res.send(result);
     });
 
-    //heroku
-     app.get('/hero', (req, res)=>{
-       res.send('connected with heroku');
-     })
+    
   } 
   finally {
 
@@ -117,6 +114,11 @@ run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("Running Genious Server");
 });
+
+//heroku
+app.get('/hero', (req, res)=>{
+  res.send('connected with heroku');
+})
 
 app.listen(port, () => {
   console.log("listening to port", port);
